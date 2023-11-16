@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ffd9a25e79.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: #fdce00;
+        border-bottom: 3px solid #286090;
+        display: flex;
+      }
+      header .bannerImg{
+        flex: 1 1 auto;
+        max-width: 750px;
+      }
+      .bannerImg img {
+        /* width: clamp(250px, 55%, 750px); */
+        width: 100%;
+        object-fit: contain;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main h4 {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 15px;
+        color: #f39c12;
+      }
+      .container {
+        width: 50%;
+        max-width: 450px;
+        /* flex: 1 1 auto; */
+        border: 1px solid #e8f0e5;
+        display: flex;
+        flex-direction: column;
+        /* grid-auto-flow: row; */
+        /* grid-auto-rows: minmax(50%,450px); */
+        gap: 30px;
+      }
+      .entry {
+        background-color: #286090;
+        color: #fff;
+        padding: 10px 10px;
+        border-radius: 3px;
+      }
+      .userInfo {
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .userInfo .input {
+        border-radius: 3px;
+        display: flex;
+        background-color: #e8f0fe;
+        box-shadow: inset 0px 1px 1px 0 rgba(40, 96, 144, 0.5);
+      }
+      .userInfo span {
+        display: inline-block;
+        /* width: 50px; */
+        border-right: 1px solid rgba(40, 96, 144, 0.5);
+        padding: 5px 10px;
+        text-align: center;
+      }
+      .userInfo input {
+        border: 0px;
+        background-color: transparent;
+        flex: 1 1 0;
+        padding: 5px 10px;
+      }
+      .userInfo input:focus {
+        box-shadow: 0px 0px 5px 0 rgba(40, 96, 144, 0.7);
+        border: none;
+        outline: none;
+      }
+      .button {
+        margin: 50px 0px 35px;
+        padding: 0 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .button input {
+        background-color: #286090;
+        color: #fff;
+        padding: 5px 10px 8px;
+        border: none;
+        border-radius: 3px;
+      }
+      .button a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85em;
+      }
+      @media (width<751px){
+        .container{
+          width: 80%;
+        }
+      }
+      @media (width<300px){
+        .container{
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="bannerImg">
+        <img src="uiic.jpg" alt="UIIC Banner" />
+      </div>
+    </header>
+    <main>
+      <h4>Surveyor Portal</h4>
+      <div class="container">
+        <div class="entry">
+          <p>Sign In</p>
+        </div>
+        <div class="userInfo">
+          <div class="input">
+            <span><i class="fa-solid fa-user"></i></span
+            ><input type="text" maxlength="25" />
+          </div>
+          <div class="input">
+            <span><i class="fa-solid fa-lock"></i></span>
+            <input type="password" maxlength="25" />
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Login" />
+          <p><a href="#">Forgot password?</a></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
